@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: Goblin;
+  src: url(./fonts/GoblinOne-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Reg;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Bakbak;
+  src: url(./fonts/BakbakOne-Regular.ttf);
+}
+body {
+  font-size: 1.6rem;
+  width: 100vw;
+  font-family: Roboto-Reg, sans-serif;
+  background: rgb(123, 211, 137);
+  background: linear-gradient(45deg, rgb(123, 211, 137) 10%, rgb(242, 249, 252) 45%, rgb(204, 201, 231) 70%);
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #37393A;
+  font-size: 2rem;
+}
+header .navbar {
+  background-color: #37393A;
+  display: flex;
+  margin-left: 2rem;
+  gap: 3rem;
+}
+header h1 {
+  font-family: Goblin, sans-serif;
+  margin-right: 4rem;
+  font-size: 6rem;
+  color: #7BD389;
+  letter-spacing: 1rem;
+  transform: rotate(-5deg);
+}
+
+.subnav-title {
+  color: white;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  list-style-type: none;
+}
+.subnav-title:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: black;
+}
+
+.vehicles::after,
+.prices::after,
+.offers::after {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  margin-left: 1rem;
+  vertical-align: bottom;
+}
+
+.subnav-content {
+  width: 14rem;
+  position: absolute;
+  bottom: -6.5rem;
+  background-color: #37393A;
+  cursor: pointer;
+  display: none;
+}
+.subnav-content .subnav-item {
+  padding: 1rem;
+  color: white;
+  list-style-type: none;
+  border: 1px solid #37393A;
+}
+.subnav-content .subnav-item a {
+  text-decoration: none;
+  padding-left: 1rem;
+  color: inherit;
+}
+.subnav-content .subnav-item:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.subnav-content .subnav-item:last-child {
+  border-top: none;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+main {
+  margin-top: 10vh;
+}
+main .upperPart {
+  display: flex;
+  gap: 1rem;
+}
+main .upperPart img {
+  width: 50%;
+}
+main .upperPart div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 9rem;
+  font-family: Bakbak, sans-serif;
+  color: #7BD389;
+  text-shadow: 2px 2px 5px #37393A, -2px -2px 5px #37393A;
+}
+main .lowerPart {
+  font-size: 2rem;
+}
+main .lowerPart h2 {
+  text-align: center;
+}
+main .lowerPart .description {
+  display: flex;
+  gap: 3rem;
+}
+main .lowerPart .description p {
+  flex: 1;
+}
+main .lowerPart .description aside {
+  flex: 1;
+}
+main .lowerPart .description aside ul {
+  width: 50%;
+}
+main .team {
+  width: 100vw;
+  padding: 0 2rem;
+  display: grid;
+  grid-template: auto auto repeat(2, 4rem) auto auto repeat(2, 4rem) auto auto repeat(2, 4rem) auto/repeat(6, 1fr);
+  grid-template-areas: ". . head head . ." ". . htech htech . ." ". . techdown . . ." ". ltechdown ltechdown rtechdown rtechdown ." "chieftech chieftech . . juntech juntech" ". . hcust hcust . ." ". . custdown . . ." ". lcustdown lcustdown rcustdown rcustdown ." "sencust sencust . . juncust juncust" ". . hit hit . ." ". . hitdown . . ." ". lhitdown lhitdown rhitdown rhitdown ." "sendev sendev . . jundev jundev";
+}
+main .team .member {
+  border: 2px solid #37393A;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+main .team .member img {
+  width: 100%;
+}
+main .team .member:nth-last-child(10) {
+  grid-area: head;
+}
+main .team .member:nth-last-child(9) {
+  grid-area: htech;
+}
+main .team .member:nth-last-child(8) {
+  grid-area: chieftech;
+}
+main .team .member:nth-last-child(7) {
+  grid-area: juntech;
+}
+main .team .member:nth-last-child(6) {
+  grid-area: hcust;
+}
+main .team .member:nth-last-child(5) {
+  grid-area: sencust;
+}
+main .team .member:nth-last-child(4) {
+  grid-area: juncust;
+}
+main .team .member:nth-last-child(3) {
+  grid-area: hit;
+}
+main .team .member:nth-last-child(2) {
+  grid-area: sendev;
+}
+main .team .member:last-child {
+  grid-area: jundev;
+}
+main .team > div:nth-child(1) {
+  grid-area: techdown;
+  border-right: 4px solid #37393A;
+}
+main .team > div:nth-child(2) {
+  grid-area: ltechdown;
+  border-top: 4px solid #37393A;
+  border-left: 4px solid #37393A;
+}
+main .team > div:nth-child(3) {
+  grid-area: rtechdown;
+  border-top: 4px solid #37393A;
+  border-right: 4px solid #37393A;
+}
+main .team > div:nth-child(4) {
+  grid-area: custdown;
+  border-right: 4px solid #37393A;
+}
+main .team > div:nth-child(5) {
+  grid-area: lcustdown;
+  border-top: 4px solid #37393A;
+  border-left: 4px solid #37393A;
+}
+main .team > div:nth-child(6) {
+  grid-area: rcustdown;
+  border-top: 4px solid #37393A;
+  border-right: 4px solid #37393A;
+}
+main .team > div:nth-child(7) {
+  grid-area: hitdown;
+  border-right: 4px solid #37393A;
+}
+main .team > div:nth-child(8) {
+  grid-area: lhitdown;
+  border-top: 4px solid #37393A;
+  border-left: 4px solid #37393A;
+}
+main .team > div:nth-child(9) {
+  grid-area: rhitdown;
+  border-top: 4px solid #37393A;
+  border-right: 4px solid #37393A;
+}
+
+footer {
+  width: 100vw;
+  height: 25vh;
+  display: grid;
+  grid-template: 1fr 5rem/repeat(3, 1fr);
+  grid-template-areas: "contacts info social" ". rights .";
+}
+footer form {
+  grid-area: info;
+}
+footer .social-media {
+  grid-area: social;
+}
+footer div:last-child {
+  grid-area: rights;
+}
+
+select {
+  appearance: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
