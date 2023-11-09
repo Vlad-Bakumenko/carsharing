@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: Goblin;
+  src: url(./fonts/GoblinOne-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Reg;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Bakbak;
+  src: url(./fonts/BakbakOne-Regular.ttf);
+}
+body {
+  font-size: 1.6rem;
+  width: 100vw;
+  font-family: Roboto-Reg, sans-serif;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #37393a;
+  font-size: 2rem;
+}
+header .navbar {
+  background-color: #37393a;
+  display: flex;
+  margin-left: 2rem;
+  gap: 3rem;
+}
+header h1 {
+  font-family: Goblin, sans-serif;
+  margin-right: 4rem;
+  font-size: 6rem;
+  color: #7bd389;
+  letter-spacing: 1rem;
+  transform: rotate(-5deg);
+}
+
+.subnav-title {
+  color: white;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  list-style-type: none;
+}
+.subnav-title:hover {
+  background-color: white;
+  transition: 0.5s;
+  color: black;
+}
+
+.vehicles::after,
+.prices::after,
+.offers::after {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  margin-left: 1rem;
+  vertical-align: bottom;
+}
+
+.subnav-content {
+  width: 14rem;
+  position: absolute;
+  bottom: -6.5rem;
+  background-color: #37393a;
+  cursor: pointer;
+  display: none;
+}
+.subnav-content .subnav-item {
+  padding: 1rem;
+  color: white;
+  list-style-type: none;
+  border: 1px solid #37393a;
+}
+.subnav-content .subnav-item a {
+  text-decoration: none;
+  padding-left: 1rem;
+  color: inherit;
+}
+.subnav-content .subnav-item:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.subnav-content .subnav-item:last-child {
+  border-top: none;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+main {
+  padding: 1rem 2rem;
+}
+main .wrapper {
+  display: flex;
+}
+main .wrapper .card {
+  display: flex;
+  flex-direction: column;
+}
+main .wrapper::after {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  width: 1rem;
+}
+main .wrapper::before {
+  content: "\f053";
+  font: var(--fa-font-solid);
+  width: 2rem;
+}
+
+/*# sourceMappingURL=vehicles.css.map */
