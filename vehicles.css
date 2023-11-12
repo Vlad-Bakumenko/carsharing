@@ -4,13 +4,30 @@
   padding: 0;
 }
 
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+html {
+  scroll-padding-top: 10vh;
+}
+
 :root {
   font-size: 62.5%;
 }
 
 @font-face {
-  font-family: Goblin;
-  src: url(./fonts/GoblinOne-Regular.ttf);
+  font-family: Agbalumo;
+  src: url(./fonts/Agbalumo-Regular.ttf);
 }
 @font-face {
   font-family: Roboto-Reg;
@@ -20,6 +37,10 @@
   font-family: Bakbak;
   src: url(./fonts/BakbakOne-Regular.ttf);
 }
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins-Bold.ttf);
+}
 body {
   font-size: 1.6rem;
   width: 100vw;
@@ -28,6 +49,7 @@ body {
 
 header {
   height: 10vh;
+  width: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -40,18 +62,29 @@ header {
   font-size: 2rem;
 }
 header .navbar {
+  width: 100%;
   background-color: #37393a;
   display: flex;
   margin-left: 2rem;
   gap: 3rem;
+  justify-content: space-between;
+}
+header .navbar .navbar-menu {
+  display: flex;
+  align-items: center;
 }
 header h1 {
-  font-family: Goblin, sans-serif;
-  margin-right: 4rem;
+  font-family: Agbalumo, sans-serif;
+  margin-right: 6rem;
   font-size: 6rem;
-  color: #7bd389;
+  color: #8CC63F;
   letter-spacing: 1rem;
   transform: rotate(-5deg);
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .subnav-title {
@@ -62,13 +95,79 @@ header h1 {
 }
 .subnav-title:hover {
   background-color: white;
-  transition: 0.5s;
+  transition: 0.2s;
+  color: black;
+  border: #8CC63F solid 3px;
+}
+.subnav-title:hover a {
   color: black;
 }
 
-.vehicles::after,
-.prices::after,
-.offers::after {
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Cabin", Sans-serif;
+  background: linear-gradient(to bottom, #37393a, #37393a 20%, white 20%, white 40%, #37393a 40%, #37393a 60%, white 60%, white 80%, #37393a 80%, #37393a 100%);
+}
+
+#hamburger-menu #sidebar-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 20rem;
+  background-color: #37393a;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border: #8CC63F 3px solid;
+}
+
+#hamburger-menu h3 {
+  color: #8CC63F;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #8CC63F;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+}
+
+.vehicles::after {
   content: "\f054";
   font: var(--fa-font-solid);
   margin-left: 1rem;
@@ -87,7 +186,7 @@ header h1 {
   padding: 1rem;
   color: white;
   list-style-type: none;
-  border: 1px solid #37393a;
+  border: 3px solid #8CC63F;
 }
 .subnav-content .subnav-item a {
   text-decoration: none;
@@ -109,23 +208,406 @@ header h1 {
 
 main {
   padding: 1rem 2rem;
+  margin-top: 10vh;
 }
-main .wrapper {
-  display: flex;
+main > h2 {
+  text-align: center;
+  font-size: 5rem;
+  font-family: Poppins, sans-serif;
 }
-main .wrapper .card {
+
+.card {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  margin-left: 30rem;
+  font-size: 2rem;
+  gap: 1rem;
 }
-main .wrapper::after {
-  content: "\f054";
-  font: var(--fa-font-solid);
-  width: 1rem;
+
+.carousel {
+  position: relative;
+  margin: 0 auto;
+  max-width: 120rem;
+  height: 80rem;
 }
-main .wrapper::before {
-  content: "\f053";
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  list-style-type: none;
+  overflow: auto;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: grey;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+.carousel__navigation-button:hover {
+  background-color: black;
+}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel::before,
+.carousel__prev {
+  left: -1rem;
+}
+
+.carousel::after,
+.carousel__next {
+  right: -1rem;
+}
+
+.carousel::before {
+  content: "\f0d9";
   font: var(--fa-font-solid);
-  width: 2rem;
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.carousel::after {
+  content: "\f0da";
+  font: var(--fa-font-solid);
+  z-index: 1;
+  background-color: #333;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.autoContainer {
+  margin: 10rem auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas: "petrol petrol petrol" "fiesta polo audia4" "audiq2 vwt6 crafter" ". sprinter ." "elec elec elec" "teslay id3 id4";
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+}
+.autoContainer #petrolHead {
+  grid-area: petrol;
+  font-size: 5rem;
+}
+.autoContainer #petrolHead::after {
+  content: "";
+  display: inline-block;
+  background-image: url(./assets/oil-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  vertical-align: bottom;
+  margin-left: 2rem;
+}
+.autoContainer #elecHead {
+  grid-area: elec;
+  font-size: 5rem;
+}
+.autoContainer #elecHead::before {
+  content: "";
+  display: inline-block;
+  background-image: url(./assets/lightning-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  vertical-align: bottom;
+}
+.autoContainer #elecHead::after {
+  content: "";
+  display: inline-block;
+  background-image: url(./assets/green-leaf-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 5rem;
+  vertical-align: bottom;
+  margin-left: 2rem;
+}
+.autoContainer .cardAuto {
+  display: grid;
+  grid-template-areas: "head head" "pic pic" "transm fuel" "power seat";
+  place-items: center center;
+  gap: 2rem;
+  border: solid 1px black;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.autoContainer .cardAuto:nth-child(3) {
+  grid-area: fiesta;
+}
+.autoContainer .cardAuto:nth-child(4) {
+  grid-area: polo;
+}
+.autoContainer .cardAuto:nth-child(5) {
+  grid-area: id3;
+}
+.autoContainer .cardAuto:nth-child(6) {
+  grid-area: audia4;
+}
+.autoContainer .cardAuto:nth-child(7) {
+  grid-area: audiq2;
+}
+.autoContainer .cardAuto:nth-child(8) {
+  grid-area: id4;
+}
+.autoContainer .cardAuto:nth-child(9) {
+  grid-area: vwt6;
+}
+.autoContainer .cardAuto:nth-child(10) {
+  grid-area: teslay;
+}
+.autoContainer .cardAuto:nth-child(11) {
+  grid-area: sprinter;
+}
+.autoContainer .cardAuto:nth-child(12) {
+  grid-area: crafter;
+}
+.autoContainer .cardAuto h2 {
+  grid-area: head;
+}
+.autoContainer .cardAuto .cardImg {
+  grid-area: pic;
+  width: 100%;
+  position: relative;
+  transition: all 1s;
+  text-align: center;
+}
+.autoContainer .cardAuto .cardImg img {
+  width: 90%;
+  opacity: 1;
+}
+.autoContainer .cardAuto .cardImg img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(5%);
+}
+.autoContainer .cardAuto .cardImg:hover img {
+  opacity: 0;
+}
+.autoContainer .cardAuto .cardImg:hover img:nth-child(2) {
+  opacity: 1;
+}
+.autoContainer .cardAuto div:nth-of-type(2) {
+  grid-area: transm;
+}
+.autoContainer .cardAuto div:nth-of-type(3) {
+  grid-area: fuel;
+}
+.autoContainer .cardAuto div:nth-of-type(4) {
+  grid-area: power;
+}
+.autoContainer .cardAuto div:nth-of-type(5) {
+  grid-area: seat;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  background-color: #37393a;
+  color: white;
+  display: grid;
+  grid-template: 1fr 5rem/repeat(3, 1fr);
+  grid-template-areas: "contacts info social" ". rights .";
+  justify-items: center;
+  align-items: center;
+  padding: 2rem;
+  row-gap: 6rem;
+}
+footer form {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+footer form > div {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+footer form > div:not(:nth-child(6)) {
+  justify-content: space-between;
+}
+footer form > div input:not([type=radio]) {
+  width: 80%;
+}
+footer form button {
+  width: 20%;
+  height: 4rem;
+  font-size: 2rem;
+}
+footer form button:hover {
+  background-color: #8CC63F;
+}
+footer .social-media {
+  grid-area: social;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  gap: 3rem;
+  font-size: 3rem;
+  grid-template-areas: "twitter insta" "facebook pinterest";
+}
+footer .social-media a, footer .social-media:link, footer .social-media:visited, footer .social-media:active {
+  text-decoration: none;
+  color: white;
+}
+footer .social-media a:hover, footer .social-media:link:hover, footer .social-media:visited:hover, footer .social-media:active:hover {
+  color: #8CC63F;
+  transform: scale(1.1);
+}
+footer .social-media .fa-instagram {
+  grid-area: insta;
+}
+footer .social-media .fa-facebook {
+  grid-area: facebook;
+}
+footer .social-media .fa-square-x-twitter {
+  grid-area: twitter;
+}
+footer .social-media .fa-pinterest {
+  grid-area: pinterest;
+}
+footer div:last-child {
+  grid-area: rights;
+}
+footer .contactDetails {
+  grid-area: contacts;
+  font-size: 2, 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  padding: 0 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .subnav {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+  .navbar > h1 {
+    font-size: 4rem;
+    transform: rotate(0);
+  }
+  .carousel {
+    height: 50rem;
+  }
+  .card {
+    transform: translateX(-80%);
+    gap: 1rem;
+    font-size: 1.8rem;
+  }
+  .autoContainer {
+    grid-template-areas: "petrol" "fiesta" "polo" "audia4" "audiq2" "vwt6" "crafter" "sprinter" "elec" "teslay" "id3" "id4";
+  }
+  .autoContainer #elecHead, .autoContainer #petrolHead {
+    font-size: 4rem;
+    text-align: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    height: auto;
+    padding: 1rem;
+  }
+  footer form {
+    width: 90%;
+    order: -1;
+  }
+  footer .social-media {
+    display: flex;
+  }
+  footer legend {
+    font-size: 1.8rem;
+  }
+  footer .contactDetails {
+    font-size: 1.8rem;
+    align-self: flex-start;
+  }
 }
 
 /*# sourceMappingURL=vehicles.css.map */

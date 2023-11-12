@@ -1,298 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/ab31c1d42a.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/ab31c1d42a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-menu">
         <ul class="subnav">
-          <li class="subnav-title">About</li>
+          <li class="subnav-title"><a href="index.html">Home</a></li>
         </ul>
         <ul class="subnav">
-          <li class="subnav-title vehicles">Our vehicles</li>
+          <li class="subnav-title"><a href="#about">About</a></li>
+        </ul>
+        <ul class="subnav">
+          <li class="subnav-title vehicles"><a href="vehicles.html">Our vehicles</a></li>
           <ul class="subnav-content">
-            <li class="subnav-item">Petrol</li>
-            <li class="subnav-item">Electric</li>
+            <li class="subnav-item"><a href="vehicles.html#petrolHead">Petrol</a></li>
+            <li class="subnav-item"><a href="vehicles.html#elecHead">Electric</a></li>
           </ul>
         </ul>
         <ul class="subnav">
-          <li class="subnav-title prices">Prices & Rates</li>
-          <ul class="subnav-content">
-            <li class="subnav-item">Rates & Fees</li>
-            <li class="subnav-item">Daily rates</li>
-          </ul>
+          <li class="subnav-title"><a href="#contactDetails">Contact</a></li>
         </ul>
-        <ul class="subnav">
-          <li class="subnav-title offers">Offers</li>
-          <ul class="subnav-content">
-            <li class="subnav-item">Subscription</li>
-            <li class="subnav-item">Discounts</li>
-          </ul>
-        </ul>
-        <ul class="subnav">
-          <li class="subnav-title">Contact</li>
-        </ul>
-      </nav>
+      </div>
       <h1>Rides</h1>
-    </header>
-    <main>
-      <div class="upperPart">
-        <div>
-          <p>Feel our vibes,</p>
-          <p>Enjoy your "Rides"</p>
-        </div>
-        <img
-          src="./assets/smiling-women-positive-man-having-fun-car.jpg"
-          alt="smiling-women-positive-man-having-fun-car"
-        />
+    </nav>
+    <input type="checkbox" id="hamburger-input" class="burger-shower" />
+    <label id="hamburger-menu" for="hamburger-input">
+      <div id="sidebar-menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="vehicles.html">Our vehicles</a></li>
+          <li><a href="#contactDetails">Contact</a></li>
+        </ul>
       </div>
-      <div class="lowerPart">
-        <h2>Rides - No.1 Carsharing in Europe</h2>
-        <div class="description">
+  </header>
+  <main>
+    <div class="upperPart">
+      <div class="hero-text">
+        <p>Feel our vibes,</p>
+        <p>Enjoy your "Rides"</p>
+      </div>
+      <div class="hero-img">
+        <div class="pic" id="pic1"></div>
+        <div class="pic" id="pic2"></div>
+        <div class="pic" id="pic3"></div>
+      </div>
+    </div>
+    <div class="lowerPart">
+      <h2 id="about">Rides - No.1 Carsharing in Europe</h2>
+      <div class="description">
+        <p>
+          At Rides, we understand that convenience and sustainability are at
+          the forefront of modern mobility. That's why we've assembled a team
+          of experienced creators and experts in the field to revolutionize
+          the carsharing industry. With a passion for innovation and a
+          commitment to delivering the best possible service, Rides is your
+          trusted partner in mobility.
+        </p>
+      </div>
+    </div>
+    <h2 class="meetTeam">Meet Our Team</h2>
+    <div class="team">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="member">
+        <h3>Head of Company</h3>
+        <img src="./assets/team/head-of-comp.png" alt="" />
+        <div>
+          <p><strong>Name:</strong> Sarah Mitchell</p>
+          <p><strong>Age:</strong> 47</p>
           <p>
-            At Rides, we understand that convenience and sustainability are at
-            the forefront of modern mobility. That's why we've assembled a team
-            of experienced creators and experts in the field to revolutionize
-            the carsharing industry. With a passion for innovation and a
-            commitment to delivering the best possible service, Rides is your
-            trusted partner in mobility.
+            Sarah has a distinguished career history, having held executive
+            positions at major automotive and mobility companies, where she
+            spearheaded innovative solutions. Her leadership ensures Rides
+            remains a No.1 in the carsharing industry.
           </p>
-          <aside>
-            <h3>Why Choose Rides?</h3>
-            <ul>
-              <li>Expertise You Can Rely On</li>
-              <li>A Fleet Designed for You</li>
-              <li>Cutting-Edge Technology</li>
-              <li>Eco-Friendly Initiatives</li>
-              <li>Transparent Pricing</li>
-              <li>Community and Safety</li>
-              <li>Flexibility and Accessibility</li>
-            </ul>
-          </aside>
         </div>
       </div>
-      <h2>Meet Our Team</h2>
-      <div class="team">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="member">
-          <h3>Head of Company</h3>
-          <img src="./assets/team/head-of-comp.png" alt="" />
+      <div class="member">
+        <h3>Head of Technical Department</h3>
+        <img src="./assets/team/head-of-tech-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> Robert Turner</p>
+          <p><strong>Age:</strong> 40</p>
+          <p>
+            Robert boasts a rich career with 15 years of experience in vehicle
+            maintenance, having previously managed large fleets for reputable
+            transport companies, ensuring our vehicles are always in top-notch
+            condition for our valued customers.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Chief Mechanical Engineer</h3>
+        <img src="./assets/team/chief-tech-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> Alex Garcia</p>
+          <p><strong>Age:</strong> 37</p>
+          <p>
+            With a decade of hands-on experience, Alex has previously worked
+            for leading auto repair shops and has a reputation for his
+            expertise in ensuring our carsharing fleet runs smoothly and
+            safely.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Junior Mechanical Engineer</h3>
+        <img src="./assets/team/jun-tech-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> Emily Sullivan</p>
+          <p><strong>Age:</strong> 28</p>
+          <p>
+            Emily has honed her skills through apprenticeships with
+            established repair shops and is now a valuable part of our team,
+            ensuring the impeccable condition of our carsharing vehicles for
+            your safety and satisfaction.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Head of Customer Support Department</h3>
+        <img src="./assets/team/head-of-cust-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> David Foster</p>
+          <p><strong>Age:</strong> 42</p>
+          <p>
+            With a wealth of experience, David has previously managed customer
+            service teams in leading tech companies. He's committed to
+            ensuring our clients have a seamless and satisfying experience
+            with Rides, handling any concerns with utmost professionalism and
+            care.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Senior Customer Support Manager</h3>
+        <img src="./assets/team/chief-cust-dept.png" alt="" />
+        <div>
+          <p><strong>Name:</strong> Sarah Anderson</p>
+          <p><strong>Age:</strong> 36</p>
+          <p>
+            Sarah has previously led support teams at renowned
+            customer-centric companies, bringing a deep understanding of
+            client needs and a passion for delivering exceptional service to
+            our carsharing community.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Junior Customer Support Manager</h3>
+        <img src="./assets/team/jun-cust-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> James Reynolds</p>
+          <p><strong>Age:</strong> 26</p>
+          <p>
+            James has honed his customer service skills through roles at
+            reputable service-oriented companies and now plays a vital role in
+            ensuring our clients receive prompt and efficient assistance,
+            making their carsharing experience exceptional.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Head of IT Department</h3>
+        <img src="./assets/team/head-of-it-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> Rachel Bennett</p>
+          <p><strong>Age:</strong> 44</p>
+          <p>
+            With an illustrious career spanning two decades, Rachel has
+            previously held senior IT roles at tech giants and startups,
+            bringing unparalleled expertise to ensure our carsharing platform
+            remains cutting-edge, secure, and user-friendly for our valued
+            customers.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Senior Developer</h3>
+        <img src="./assets/team/chief-of-it-dept.jpg" alt="" />
+        <div>
+          <p><strong>Name:</strong> Daniel Chang</p>
+          <p><strong>Age:</strong> 36</p>
+          <p>
+            With a solid track record in software development, Daniel has
+            previously contributed his expertise to renowned tech firms,
+            bringing his innovative mindset to enhance the functionality and
+            user experience of our carsharing platform.
+          </p>
+        </div>
+      </div>
+      <div class="member">
+        <h3>Junior Developer</h3>
+        <img src="./assets/team/jun-of-it-dept.avif" alt="" />
+        <div>
+          <p><strong>Name:</strong> Alex Turner</p>
+          <p><strong>Age:</strong> 28</p>
+          <p>
+            With a background in software engineering and previous roles at
+            tech startups, Alex contributes fresh ideas and a strong work
+            ethic to our team, assisting in the continuous improvement of our
+            carsharing platform.
+          </p>
+        </div>
+      </div>
+    </div>
+    <h2 class="valuesHead">Why Choose Rides?</h3>
+      <div class="values-cards">
+        <div class="values-wrapper">
           <div>
-            <p>Name:Sarah Mitchell</p>
-            <p>Age:47</p>
-            <p>
-              Sarah has a distinguished career history, having held executive
-              positions at major automotive and mobility companies, where she
-              spearheaded innovative solutions. Her leadership ensures Rides
-              remains a No.1 in the carsharing industry.
-            </p>
+            <h3>Expertise You Can Rely On</h3>
+          </div>
+          <div>
+            <img src="./assets/compValues/expertise you can rely on.jpg" alt="expertise you can rely on">
+            <p>Our team comprises industry veterans who have spent years shaping the carsharing landscape. With their
+              collective knowledge, we have tailored our services to cater to your specific needs, ensuring a seamless
+              and enjoyable carsharing experience.</p>
           </div>
         </div>
-        <div class="member">
-          <h3>Head of Technical Department</h3>
-          <img src="./assets/team/head-of-tech-dept.jpg" alt="" />
+        <div class="values-wrapper">
           <div>
-            <p>Name:Robert Turner</p>
-            <p>Age:40</p>
-            <p>
-              Robert boasts a rich career with 15 years of experience in vehicle
-              maintenance, having previously managed large fleets for reputable
-              transport companies, ensuring our vehicles are always in top-notch
-              condition for our valued customers.
-            </p>
+            <h3>A Fleet Designed for You</h3>
+          </div>
+          <div>
+            <img src="./assets/compValues/fleet-des-for-you.jpg" alt="fleet-des-for-you">
+            <p>We have meticulously curated our car fleet, offering a diverse range of vehicles to suit every occasion.
+              Whether you need a fuel-efficient hybrid for your daily commute or a spacious SUV for a weekend getaway,
+              WheelWise has you covered.</p>
           </div>
         </div>
-        <div class="member">
-          <h3>Chief Mechanical Engineer</h3>
-          <img src="./assets/team/chief-tech-dept.jpg" alt="" />
+        <div class="values-wrapper">
           <div>
-            <p>Name:Alex Garcia</p>
-            <p>Age:37</p>
-            <p>
-              With a decade of hands-on experience, Alex has previously worked
-              for leading auto repair shops and has a reputation for his
-              expertise in ensuring our carsharing fleet runs smoothly and
-              safely.
-            </p>
+            <h3>Cutting-Edge Technology</h3>
+          </div>
+          <div>
+            <img src="./assets/compValues/cutting-edge-tech.jpg" alt="">
+            <p>We believe that technology is the driving force behind a successful carsharing service. With the
+              expertise of our creators, we've developed a user-friendly app that allows you to book, locate, and unlock
+              your chosen vehicle with ease. Additionally, our app features real-time tracking, allowing you to plan
+              your trips more efficiently.</p>
           </div>
         </div>
-        <div class="member">
-          <h3>Junior Mechanical Engineer</h3>
-          <img src="./assets/team/jun-tech-dept.jpg" alt="" />
+        <div class="values-wrapper">
           <div>
-            <p>Name:Emily Sullivan</p>
-            <p>Age:28</p>
-            <p>
-              Emily has honed her skills through apprenticeships with
-              established repair shops and is now a valuable part of our team,
-              ensuring the impeccable condition of our carsharing vehicles for
-              your safety and satisfaction.
-            </p>
+            <h3>Eco-Friendly Initiatives</h3>
+          </div>
+          <div>
+            <img src="./assets/compValues/eco-friendly.jpg" alt="eco-friendly">
+            <p>Sustainability is a core value at WheelWise. Our creators have worked tirelessly to implement
+              eco-friendly solutions in our carsharing practices. Our vehicles are regularly maintained to reduce
+              emissions, and we are committed to investing in electric and hybrid options to reduce our carbon
+              footprint.</p>
           </div>
         </div>
-        <div class="member">
-          <h3>Head of Customer Support Department</h3>
-          <img src="./assets/team/head-of-cust-dept.jpg" alt="" />
+        <div class="values-wrapper">
           <div>
-            <p>Name:David Foster</p>
-            <p>Age:42</p>
-            <p>
-              With a wealth of experience, David has previously managed customer
-              service teams in leading tech companies. He's committed to
-              ensuring our clients have a seamless and satisfying experience
-              with Rides, handling any concerns with utmost professionalism and
-              care.
-            </p>
+            <h3>Transparent Pricing</h3>
+          </div>
+          <div>
+            <img src="./assets/compValues/transparent pricing.jpg" alt="transparent pricing">
+            <p> We believe in honesty and transparency when it comes to pricing. There are no hidden fees or surprise
+              charges with WheelWise. Our experienced team has ensured that our pricing structure is straightforward,
+              competitive, and designed to provide excellent value for your money.</p>
           </div>
         </div>
-        <div class="member">
-          <h3>Senior Customer Support Manager</h3>
-          <img src="./assets/team/chief-cust-dept.png" alt="" />
+        <div class="values-wrapper">
           <div>
-            <p>Name:Sarah Anderson</p>
-            <p>Age:36</p>
-            <p>
-              Sarah has previously led support teams at renowned
-              customer-centric companies, bringing a deep understanding of
-              client needs and a passion for delivering exceptional service to
-              our carsharing community.
-            </p>
+            <h3>Community and Safety</h3>
           </div>
-        </div>
-        <div class="member">
-          <h3>Junior Customer Support Manager</h3>
-          <img src="./assets/team/jun-cust-dept.jpg" alt="" />
           <div>
-            <p>Name:James Reynolds</p>
-            <p>Age:26</p>
-            <p>
-              James has honed his customer service skills through roles at
-              reputable service-oriented companies and now plays a vital role in
-              ensuring our clients receive prompt and efficient assistance,
-              making their carsharing experience exceptional.
-            </p>
-          </div>
-        </div>
-        <div class="member">
-          <h3>Head of IT Department</h3>
-          <img src="./assets/team/head-of-it-dept.jpg" alt="" />
-          <div>
-            <p>Name:Rachel Bennett</p>
-            <p>Age:44</p>
-            <p>
-              With an illustrious career spanning two decades, Rachel has
-              previously held senior IT roles at tech giants and startups,
-              bringing unparalleled expertise to ensure our carsharing platform
-              remains cutting-edge, secure, and user-friendly for our valued
-              customers.
-            </p>
-          </div>
-        </div>
-        <div class="member">
-          <h3>Senior Developer</h3>
-          <img src="./assets/team/chief-of-it-dept.jpg" alt="" />
-          <div>
-            <p>Name:Daniel Chang</p>
-            <p>Age:36</p>
-            <p>
-              With a solid track record in software development, Daniel has
-              previously contributed his expertise to renowned tech firms,
-              bringing his innovative mindset to enhance the functionality and
-              user experience of our carsharing platform.
-            </p>
-          </div>
-        </div>
-        <div class="member">
-          <h3>Junior Developer</h3>
-          <img src="./assets/team/jun-of-it-dept.avif" alt="" />
-          <div>
-            <p>Name:Alex Turner</p>
-            <p>Age:28</p>
-            <p>
-              With a background in software engineering and previous roles at
-              tech startups, Alex contributes fresh ideas and a strong work
-              ethic to our team, assisting in the continuous improvement of our
-              carsharing platform.
-            </p>
+            <img src="./assets/compValues/Community and Safety.jpg" alt="Community and Safety">
+            <p>Our creators have focused on building a strong community of responsible carsharers. Safety is our top
+              priority, and we have implemented strict vehicle maintenance and cleanliness standards. In addition, our
+              24/7 customer support is always available to assist you.</p>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="contactDetails">
-        <h3>Main Office</h3>
-        <p>Berlin, Germany</p>
-        <p>Friedrichstr. 1</p>
-        <p>Tel: +4927187120</p>
-        <p>Email: rides@gmail.com</p>
+  </main>
+  <footer id="contactDetails">
+    <div class="contactDetails">
+      <h3>Main Office</h3>
+      <p>Berlin, Germany</p>
+      <p>Friedrichstr. 1</p>
+      <p>Tel: +4927187120</p>
+      <p>Email: <a href="mailto:rides@gmail.com">rides@gmail.com</a></p>
+    </div>
+    <form action="https://formspree.io/f/xgejbejg"
+    method="POST">
+      <legend>Sign up to get updates and free shipping on first order</legend>
+      <div>
+        <label for="fName">*Name:</label>
+        <input type="text" id="fName" minlength="2" maxlength="30" placeholder="Name..." required />
       </div>
-      <form action="">
-        <div>
-          <label for="">Name:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label for="">Surname:</label>
-          <input type="text" />
-        </div>
-        <div>
-          <label for="">Telefon:</label>
-          <input type="tel" />
-        </div>
-        <div>
-          <label for="">Email:</label>
-          <input type="email" />
-        </div>
+      <div>
+        <label for="lName">*Surname:</label>
+        <input type="text" id="lName" minlength="2" maxlength="30" placeholder="Surname..." required/>
+      </div>
+      <div>
+        <label for="phone">*Telefon:</label>
+        <input type="tel" id="phone" placeholder="Your Telephone..." />
+      </div>
+      <div>
+        <label for="email">*Email:</label>
+        <input type="email" id="email" placeholder="Your Email..." minlength="8" required/>
+      </div>
+      <div>
         <div>
           <input type="radio" name="citizenship" id="citizen" value="Citizen" />
           <label for="citizen">EU citizenship</label>
-          <input
-            type="radio"
-            name="citizenship"
-            id="non-eu-citizen"
-            value="Non-Citizen"
-          />
+        </div>
+        <div>
+          <input type="radio" name="citizenship" id="non-eu-citizen" value="Non-Citizen" />
           <label for="non-eu-citizen">Non-EU citizenship</label>
         </div>
-        <div class="source-of-info">
-          <label for="source-of-info">How did you find out about us?</label>
-          <div class="select">
-            <select name="source-of-info" id="source-of-info">
-              <option value="" disabled selected>
-                --Please choose an option--
-              </option>
-              <option value="internet">Internet</option>
-              <option value="socialmedias">Social Media</option>
-              <option value="friends">Friends</option>
-              <option value="advertisement">Google Ads, Facebook Ads</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <div class="social-media">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-square-x-twitter"></i>
-        <i class="fa-brands fa-pinterest"></i>
       </div>
-      <div>&reg;2023 Vladyslav Bakumenko. All rights reserved</div>
-    </footer>
-  </body>
+      <div class="source-of-info">
+        <label for="source-of-info">How did you find out about us?</label>
+        <div class="select">
+          <select name="source-of-info" id="source-of-info">
+            <option value="" disabled selected>
+              --Please choose an option--
+            </option>
+            <option value="internet">Internet</option>
+            <option value="socialmedias">Social Media</option>
+            <option value="friends">Friends</option>
+            <option value="advertisement">Google Ads, Facebook Ads</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+    </div>
+    <div>&reg;2023 Vladyslav Bakumenko. All rights reserved</div>
+  </footer>
+</body>
+
 </html>

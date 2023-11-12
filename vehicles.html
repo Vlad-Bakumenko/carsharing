@@ -8,277 +8,425 @@
     <link rel="stylesheet" href="vehicles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-          <ul class="subnav">
-            <li class="subnav-title">About</li>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-menu">
+        <ul class="subnav">
+          <li class="subnav-title"><a href="index.html">Home</a></li>
+        </ul>
+        <ul class="subnav">
+          <li class="subnav-title"><a href="index.html#about">About</a></li>
+        </ul>
+        <ul class="subnav">
+          <li class="subnav-title vehicles"><a href="vehicles.html">Our vehicles</a></li>
+          <ul class="subnav-content">
+            <li class="subnav-item"><a href="#petrolHead">Petrol</a></li>
+            <li class="subnav-item"><a href="#elecHead">Electric</a></li>
           </ul>
-          <ul class="subnav">
-            <li class="subnav-title vehicles">Our vehicles</li>
-            <ul class="subnav-content">
-              <li class="subnav-item">Petrol</li>
-              <li class="subnav-item">Electric</li>
-            </ul>
-          </ul>
-          <ul class="subnav">
-            <li class="subnav-title prices">Prices & Rates</li>
-            <ul class="subnav-content">
-              <li class="subnav-item">Rates & Fees</li>
-              <li class="subnav-item">Daily rates</li>
-            </ul>
-          </ul>
-          <ul class="subnav">
-            <li class="subnav-title offers">Offers</li>
-            <ul class="subnav-content">
-              <li class="subnav-item">Subscription</li>
-              <li class="subnav-item">Discounts</li>
-            </ul>
-          </ul>
-          <ul class="subnav">
-            <li class="subnav-title">Contact</li>
-          </ul>
-        </nav>
-        <h1>Rides</h1>
-      </header>
+        </ul>
+        <ul class="subnav">
+          <li class="subnav-title"><a href="#contactDetails">Contact</a></li>
+        </ul>
+      </div>
+      <h1>Rides</h1>
+    </nav>
+    <input type="checkbox" id="hamburger-input" class="burger-shower" />
+    <label id="hamburger-menu" for="hamburger-input">
+      <div id="sidebar-menu">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="vehicles.html">Our vehicles</a></li>
+          <li><a href="#contactDetails">Contact</a></li>
+        </ul>
+      </div>
+  </header>
       <main>
-        <h1>Our Fleet</h1>
-        <div class="wrapper">
-          <div class="card">
-            <img src="./assets/fleet/s-veh.png" alt="s-vehicles">
-            <h2>S-vehicles</h2>
-            <p>Ford Fiesta, VW Polo, VW ID.3</p>
-            <p>Our S-vehicles cater to diverse customer purposes, from daily commutes to weekend getaways, offering flexibility, convenience, and cost-effectiveness.</p>
-          </div>
-          <div class="card">
-            <img src="./assets/fleet/m-veh.png" alt="m-vehicles">
-            <h2>M-vehicles</h2>
-            <p>Audi A4, Audi Q2, VW ID.4</p>
-            <p>M-vehicles, offering greater space and versatility, are perfect for customers planning family outings or extended road trips.</p>
-          </div>
-          <div class="card">
-            <img src="./assets/fleet/premium-veh.png" alt="premium-vehicles">
-            <h2>Premium vehicles</h2>
-            <p>Tesla Model 3</p>
-            <p>Our premium vehicles cater to discerning customers seeking luxury and style for special occasions or business-related travel.</p>
-          </div>
-          <div class="card">
-            <img src="./assets/fleet/l-veh.png" alt="l-vehicles">
-            <h2>L-vehicles</h2>
-            <p>VW T6</p>
-            <p>
-              Our spacious L-vehicles are the perfect choice for families and groups embarking on extended vacations or weekend adventures, offering comfort and convenience.</p>
-          </div>
-          <div class="card">
-            <img src="./assets/fleet/xl-veh.png" alt="xl-vehicles">
-            <h2>XL-vehicles</h2>
-            <p>VW Crafter, Mercedes Sprinter</p>
-            <p>XL-vehicles, with their generous seating and cargo capacity, are tailor-made for customers planning group outings, airport transfers, or cross-country trips.</p>
-          </div>
-        </div>
-        <div>
-          <div>
+        <h2>Our Fleet</h1>
+        <section class="carousel" aria-label="Gallery">
+          <ol class="carousel__viewport">
+            <li id="carousel__slide1"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="card">
+                  <img src="./assets/fleet/s-veh.png" alt="s-vehicles">
+                  <h2>S-vehicles</h2>
+                  <p>Ford Fiesta, VW Polo, VW ID.3</p>
+                  <p>Our S-vehicles cater to diverse customer purposes, from daily commutes to weekend getaways, offering flexibility, convenience, and cost-effectiveness.</p>
+                </div>  
+              <div class="carousel__snapper">
+                <a href="#carousel__slide4"
+                   class="carousel__prev">Go to last slide</a>
+                <a href="#carousel__slide2"
+                   class="carousel__next">Go to next slide</a>
+              </div>
+            </li>
+            <li id="carousel__slide2"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="card">
+                  <img src="./assets/fleet/m-veh.png" alt="m-vehicles">
+                  <h2>M-vehicles</h2>
+                  <p>Audi A4, Audi Q2, VW ID.4</p>
+                  <p>M-vehicles, offering greater space and versatility, are perfect for customers planning family outings or extended road trips.</p>
+                </div>
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide1"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide3"
+                 class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide3"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="card">
+                  <img src="./assets/fleet/premium-veh.png" alt="premium-vehicles">
+                  <h2>Premium vehicles</h2>
+                  <p>Tesla Model 3</p>
+                  <p>Our premium vehicles cater to discerning customers seeking luxury and style for special occasions or business-related travel.</p>
+                </div>
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide2"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide4"
+                 class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide4"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="card">
+                  <img src="./assets/fleet/l-veh.png" alt="l-vehicles">
+                  <h2>L-vehicles</h2>
+                  <p>VW T6</p>
+                  <p>
+                    Our spacious L-vehicles are the perfect choice for families and groups embarking on extended vacations or weekend adventures, offering comfort and convenience.</p>
+                </div>
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide3"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide5"
+                 class="carousel__next">Go to first slide</a>
+            </li>
+            <li id="carousel__slide5"
+                tabindex="0"
+                class="carousel__slide">
+                <div class="card">
+                  <img src="./assets/fleet/xl-veh.png" alt="xl-vehicles">
+                  <h2>XL-vehicles</h2>
+                  <p>VW Crafter, Mercedes Sprinter</p>
+                  <p>XL-vehicles, with their generous seating and cargo capacity, are tailor-made for customers planning group outings, airport transfers, or cross-country trips.</p>
+                </div>
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide4"
+                 class="carousel__prev">Go to previous slide</a>
+              <a href="#carousel__slide1"
+                 class="carousel__next">Go to first slide</a>
+            </li>
+          </ol>
+          <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide1"
+                   class="carousel__navigation-button">Go to slide 1</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide2"
+                   class="carousel__navigation-button">Go to slide 2</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide3"
+                   class="carousel__navigation-button">Go to slide 3</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide4"
+                   class="carousel__navigation-button">Go to slide 4</a>
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide5"
+                   class="carousel__navigation-button">Go to slide 5</a>
+              </li>
+            </ol>
+          </aside>
+        </section>
+        <div class="autoContainer">
+          <h2 id="petrolHead">Petrol vehicles</h2>
+          <h2 id="elecHead">Electric vehicles</h2>
+          <div class="cardAuto">
             <h2>Ford Fiesta</h2>
-            <img src="" alt="">
-            <div>
-              <h3></h3>
-              <p></p>
+            <div class="cardImg">
+              <img src="./assets/fleet/ford-fiesta-diagonal.png" alt="ford-fiesta-diagonal">
+              <img src="./assets/fleet/ford-fiesta-profil.png" alt="ford-fiesta-profil">
             </div>
-            <div>
-              <h3></h3>
-              <p></p>
+            <div class="transmission">
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
-            <div>
-              <h3></h3>
-              <p></p>
+            <div class="fuel">
+              <h3>Petrol</h3>
+              <p>Fuel type</p>
             </div>
-            <div>
-              <h3></h3>
-              <p></p>
+            <div class="engPower">
+              <h3>125hp</h3>
+              <p>Engine power</p>
+            </div>
+            <div class="seats">
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>VW Polo</h2>
-            <img src="" alt="">
-            <div>
-              <h3></h3>
-              <p></p>
+            <div class="cardImg"><img src="./assets/fleet/vw-polo-diagonal-image-slider.png" alt="vw-polo-diagonal">
+            <img src="./assets/fleet/vw-polo-profile-image-slider.png" alt="vw-polo-profil">
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Petrol</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>94hp</h3>
+              <p>Engine power</p>
+            </div>
+            <div>
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>VW ID.3</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/vw-id3-diagonal-image-slider.png" alt="vw-id3-diagonal">
+            <img src="./assets/fleet/vw-id3-profil-image-slider.png" alt="vw-id3-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Electric</h3>
+              <p>Power Source</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>420km</h3>
+              <p>Max. reach</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>Audi A4</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/audi-a4-diagonal-image-slider.png" alt="audi-a4-diagonal">
+            <img src="./assets/fleet/audi-a4-profil-image-slider.png" alt="audi-a4-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Petrol</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>148hp</h3>
+              <p>Engine power</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>Audi Q2</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/audi-q2-diagonal-image-slider.png" alt="audi-q2-diagonal">
+            <img src="./assets/fleet/audi-q2-profil-image-slider.png" alt="audi-q2-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Petrol</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>148hp</h3>
+              <p>Engine power</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>VW ID.4</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/id4-slider-fleet-diagonal.png" alt="id4-slider-fleet-diagonal">
+            <img src="./assets/fleet/id4-slider-fleet-profile.png" alt="id4-slider-fleet-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Electric</h3>
+              <p>Power Source</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>531km</h3>
+              <p>Max. reach</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>5</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>VW T6</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/vw-t6-diagonal-image-slider.png" alt="vw-t6-diagonal">
+            <img src="./assets/fleet/vw-t6-profil-image-slider.png" alt="vw-t6-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Manual</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Diesel</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>100hp</h3>
+              <p>Engine power</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
-            </div>
-          </div>
-          <div>
-            <h2>Tesla Model 3</h2>
-            <img src="" alt="">
-            <div>
-              <h3></h3>
-              <p></p>
-            </div>
-            <div>
-              <h3></h3>
-              <p></p>
-            </div>
-            <div>
-              <h3></h3>
-              <p></p>
-            </div>
-            <div>
-              <h3></h3>
-              <p></p>
+              <h3>3</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
+            <h2>Tesla Model Y</h2>
+            <div class="cardImg"><img src="./assets/fleet/tesla-y-diagonal.png" alt="tesla-y-diagonal">
+            <img src="./assets/fleet/tesla-y-profile.png" alt="tesla-y-profil"></div>
+            <div>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
+            </div>
+            <div>
+              <h3>Electric</h3>
+              <p>Power Source</p>
+            </div>
+            <div>
+              <h3>533km</h3>
+              <p>Max. reach</p>
+            </div>
+            <div>
+              <h3>5</h3>
+              <p>Seats</p>
+            </div>
+          </div>
+          <div class="cardAuto">
             <h2>Mercedes Sprinter</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/mercedes-sprinter-diagonal-image-slider.png" alt="mercedes-sprinter-diagonal">
+            <img src="./assets/fleet/mercedes-sprinter-profil-image-slider.png" alt="mercedes-sprinter-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Diesel</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>148hp</h3>
+              <p>Engine power</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>3</h3>
+              <p>Seats</p>
             </div>
           </div>
-          <div>
+          <div class="cardAuto">
             <h2>VW Crafter</h2>
-            <img src="" alt="">
+            <div class="cardImg"><img src="./assets/fleet/vw-crafter-diagonal-image-slider.png" alt="vw-crafter-diagonal">
+            <img src="./assets/fleet/vw-crafter-profile-image-slider.png" alt="vw-crafter-profil"></div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Automatic & Manual</h3>
+              <p>Transmission</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>Diesel</h3>
+              <p>Fuel type</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>138hp</h3>
+              <p>Engine power</p>
             </div>
             <div>
-              <h3></h3>
-              <p></p>
+              <h3>3</h3>
+              <p>Seats</p>
             </div>
           </div>
         </div>
       </main>
-      
-    
+      <footer id="contactDetails">
+        <div class="contactDetails">
+          <h3>Main Office</h3>
+          <p>Berlin, Germany</p>
+          <p>Friedrichstr. 1</p>
+          <p>Tel: +4927187120</p>
+          <p>Email: <a href="mailto:rides@gmail.com">rides@gmail.com</a></p>
+        </div>
+        <form  action="https://formspree.io/f/xgejbejg"
+        method="POST">
+          <legend>Sign up to get updates and free shipping on first order</legend>
+          <div>
+            <label for="fName">*Name:</label>
+            <input type="text" id="fName" minlength="2" maxlength="30" placeholder="Name..." required />
+          </div>
+          <div>
+            <label for="lName">*Surname:</label>
+            <input type="text" id="lName" minlength="2" maxlength="30" placeholder="Surname..." required/>
+          </div>
+          <div>
+            <label for="phone">*Telefon:</label>
+            <input type="tel" id="phone" placeholder="Your Telephone..." />
+          </div>
+          <div>
+            <label for="email">*Email:</label>
+            <input type="email" id="email" placeholder="Your Email..." minlength="8" required/>
+          </div>
+          <div>
+            <div>
+              <input type="radio" name="citizenship" id="citizen" value="Citizen" />
+              <label for="citizen">EU citizenship</label>
+            </div>
+            <div>
+              <input type="radio" name="citizenship" id="non-eu-citizen" value="Non-Citizen" />
+              <label for="non-eu-citizen">Non-EU citizenship</label>
+            </div>
+          </div>
+          <div class="source-of-info">
+            <label for="source-of-info">How did you find out about us?</label>
+            <div class="select">
+              <select name="source-of-info" id="source-of-info">
+                <option value="" disabled selected>
+                  --Please choose an option--
+                </option>
+                <option value="internet">Internet</option>
+                <option value="socialmedias">Social Media</option>
+                <option value="friends">Friends</option>
+                <option value="advertisement">Google Ads, Facebook Ads</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+        <div>&reg;2023 Vladyslav Bakumenko. All rights reserved</div>
+      </footer>
 </body>
 </html>
