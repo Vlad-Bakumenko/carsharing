@@ -3,7 +3,7 @@ Rides is a popular carsharing service known for its commitment to eco-friendly v
 ##Content
 - Main page (About, Team, Values)
 - Fleet page (General overview, More detailed description)
-##Features:
+## Features:
 1. Media-queries
 2. Carousel
 3. Flexbox
@@ -12,6 +12,6 @@ Rides is a popular carsharing service known for its commitment to eco-friendly v
 6. Forms
 7. Box-shadows
 8. Google Fonts
-##Tools:
+## Tools:
 1. HTML
 2. SCSS
