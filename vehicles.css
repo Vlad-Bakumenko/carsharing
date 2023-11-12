@@ -43,7 +43,7 @@ html {
 }
 body {
   font-size: 1.6rem;
-  width: 100vw;
+  width: 99vw;
   font-family: Roboto-Reg, sans-serif;
 }
 
@@ -54,7 +54,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -207,8 +207,7 @@ a {
 }
 
 main {
-  padding: 1rem 2rem;
-  margin-top: 10vh;
+  margin: 10vh auto;
 }
 main > h2 {
   text-align: center;
@@ -573,9 +572,11 @@ select {
   }
   .carousel {
     height: 50rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .card {
-    transform: translateX(-80%);
+    transform: translateX(-70%);
     gap: 1rem;
     font-size: 1.8rem;
   }
@@ -594,9 +595,21 @@ select {
     height: auto;
     padding: 1rem;
   }
+  footer div:last-child {
+    font-size: 1.6rem;
+  }
   footer form {
     width: 90%;
     order: -1;
+  }
+  footer form .source-of-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer form button {
+    align-self: flex-end;
+    width: 8rem;
   }
   footer .social-media {
     display: flex;
@@ -607,6 +620,24 @@ select {
   footer .contactDetails {
     font-size: 1.8rem;
     align-self: flex-start;
+  }
+}
+@media (max-width: 400px) {
+  main {
+    margin: 0;
+  }
+  .carousel {
+    margin: 1rem;
+  }
+  .card {
+    transform: translateX(-110%);
+  }
+  .autoContainer {
+    margin: 10vh auto;
+    overflow: auto;
+  }
+  .autoContainer .cardAuto {
+    width: 85%;
   }
 }
 
