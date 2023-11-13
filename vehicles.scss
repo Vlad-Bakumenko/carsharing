@@ -225,6 +225,7 @@ header {
   
 main {
     margin: 10vh auto;
+    padding: 0 2rem;
     > h2 {
         text-align: center;
         font-size: 5rem;
@@ -376,7 +377,7 @@ main {
                          ". sprinter ."
                          "elec elec elec"
                          "teslay id3 id4";
-    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr));
     #petrolHead {
         grid-area: petrol;
         font-size: 5rem;
@@ -615,12 +616,12 @@ main {
     transform: rotate(0);
   }
   .carousel {
-    height: 50rem;
+    height: 60rem;
     margin-left: 1rem;
     margin-right: 1rem;
   }
   .card {
-    transform: translateX(-70%);
+    transform: translateX(-40%);
     gap: 1rem;
     font-size: 1.8rem;
   }
@@ -687,7 +688,7 @@ main {
         margin: 1rem;
       }
       .card {
-        transform: translateX(-110%);
+        transform: translateX(-130%);
       }
       .autoContainer {
         margin: 10vh auto;
@@ -695,5 +696,8 @@ main {
         .cardAuto {
             width: 85%;
         }
+      }
+      #petrolHead {
+        margin-right: 4rem;
       }
 }

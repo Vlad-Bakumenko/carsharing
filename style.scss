@@ -38,6 +38,7 @@ body {
   font-size: 1.6rem;
   width: 100vw;
   font-family: Roboto-Reg, sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -207,9 +208,8 @@ a {
 }
 
 main {
-  margin-top: 11vh;
+  margin-top: 10vh;
   width: 100%;
-  padding: 0 2rem;
   h2 {
     font-size: 5rem;
     text-align: center;
@@ -265,6 +265,7 @@ main {
   }
   .lowerPart {
     font-size: 3rem;
+    margin: 0 3rem;
     h2 {
       text-align: center;
       font-size: 7rem;
@@ -322,6 +323,7 @@ main {
         font-size: 3rem;
         text-align: center;
         font-weight: bold;
+        padding: 0 1rem;
       }
       img {
         width: 100%;
@@ -675,6 +677,19 @@ select {
       font-size: 1.8rem;
       align-self: flex-start;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  #about {
+    font-size: 4rem;
+    margin-top: 40vh;
+  }
+  .values-wrapper div:first-child {
+    font-size: 4rem;
+  }
+  .values-wrapper div:last-child > p {
+    font-size: 1.8rem;
   }
 }
 

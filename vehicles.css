@@ -208,6 +208,7 @@ a {
 
 main {
   margin: 10vh auto;
+  padding: 0 2rem;
 }
 main > h2 {
   text-align: center;
@@ -347,7 +348,7 @@ main > h2 {
   display: grid;
   gap: 2rem;
   grid-template-areas: "petrol petrol petrol" "fiesta polo audia4" "audiq2 vwt6 crafter" ". sprinter ." "elec elec elec" "teslay id3 id4";
-  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr));
 }
 .autoContainer #petrolHead {
   grid-area: petrol;
@@ -571,12 +572,12 @@ select {
     transform: rotate(0);
   }
   .carousel {
-    height: 50rem;
+    height: 60rem;
     margin-left: 1rem;
     margin-right: 1rem;
   }
   .card {
-    transform: translateX(-70%);
+    transform: translateX(-40%);
     gap: 1rem;
     font-size: 1.8rem;
   }
@@ -630,7 +631,7 @@ select {
     margin: 1rem;
   }
   .card {
-    transform: translateX(-110%);
+    transform: translateX(-130%);
   }
   .autoContainer {
     margin: 10vh auto;
@@ -638,6 +639,9 @@ select {
   }
   .autoContainer .cardAuto {
     width: 85%;
+  }
+  #petrolHead {
+    margin-right: 4rem;
   }
 }
 
