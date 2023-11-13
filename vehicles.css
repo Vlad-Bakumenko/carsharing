@@ -624,6 +624,9 @@ select {
   }
 }
 @media (max-width: 400px) {
+  .navbar > h1 {
+    margin-right: 2rem;
+  }
   main {
     margin: 0;
   }

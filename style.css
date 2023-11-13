@@ -644,6 +644,9 @@ select {
     font-size: 4rem;
     margin-top: 40vh;
   }
+  .navbar > h1 {
+    margin-right: 2rem;
+  }
   .values-wrapper div:first-child {
     font-size: 4rem;
   }
