@@ -425,7 +425,6 @@ footer form button {
   width: 20%;
   height: 4rem;
   font-size: 2rem;
-  padding: 2%;
 }
 footer form button:hover {
   background-color: #8CC63F;
@@ -667,6 +666,7 @@ select {
   }
   footer form button {
     align-self: flex-end;
+    width: 30%;
   }
   footer .social-media {
     display: flex;
