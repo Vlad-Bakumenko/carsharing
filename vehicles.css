@@ -43,7 +43,6 @@ html {
 }
 body {
   font-size: 1.6rem;
-  width: 100vw;
   font-family: Roboto-Reg, sans-serif;
 }
 
@@ -54,7 +53,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,13 +64,13 @@ header .navbar {
   width: 100%;
   background-color: #37393a;
   display: flex;
-  margin-left: 2rem;
   gap: 3rem;
   justify-content: space-between;
 }
 header .navbar .navbar-menu {
   display: flex;
   align-items: center;
+  padding-left: 2%;
 }
 header h1 {
   font-family: Agbalumo, sans-serif;
@@ -103,25 +102,20 @@ a {
   color: black;
 }
 
-#hamburger-input {
+#hamburger-input, i.fa-bars {
   display: none;
-}
-
-#hamburger-menu {
   position: fixed;
   top: 20px;
   left: 20px;
-  width: 50px;
-  height: 50px;
-  display: none;
+  width: 20px;
+  height: 20px;
   border: none;
   padding: 0px;
   margin: 0px;
-  font-family: "Cabin", Sans-serif;
-  background: linear-gradient(to bottom, #37393a, #37393a 20%, white 20%, white 40%, #37393a 40%, #37393a 60%, white 60%, white 80%, #37393a 80%, #37393a 100%);
+  color: white;
 }
 
-#hamburger-menu #sidebar-menu {
+#sidebar-menu {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -138,31 +132,31 @@ a {
   border: #8CC63F 3px solid;
 }
 
-#hamburger-menu h3 {
+#sidebar-menu h3 {
   color: #8CC63F;
   font-size: 2.2rem;
 }
 
-#hamburger-menu ul {
+#sidebar-menu ul {
   padding-left: 0px;
 }
 
-#hamburger-menu li {
+#sidebar-menu li {
   list-style-type: none;
   line-height: 3rem;
 }
 
-#hamburger-menu a {
+#sidebar-menu a {
   color: #8CC63F;
   font-size: 2rem;
   text-decoration: none;
 }
 
-#hamburger-menu a:hover {
+#sidebar-menu a:hover {
   text-decoration: underline;
 }
 
-#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+#hamburger-input:checked + #sidebar-menu {
   visibility: visible;
   left: 0;
 }
@@ -177,10 +171,11 @@ a {
 .subnav-content {
   width: 14rem;
   position: absolute;
-  bottom: -6.5rem;
+  bottom: -7.7rem;
   background-color: #37393a;
   cursor: pointer;
   display: none;
+  margin-top: 2rem;
 }
 .subnav-content .subnav-item {
   padding: 1rem;
@@ -503,6 +498,12 @@ footer form > div:not(:nth-child(6)) {
 footer form > div input:not([type=radio]) {
   width: 80%;
 }
+footer form > div:nth-child(6) {
+  align-items: center;
+}
+footer form > div:nth-child(6) > div > label {
+  font-size: 1.8rem;
+}
 footer form button {
   width: 20%;
   height: 4rem;
@@ -564,17 +565,26 @@ select {
   .subnav {
     display: none;
   }
-  #hamburger-menu {
+  i.fa-bars {
     display: inline;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  #hamburger-input {
+    display: inline;
+    opacity: 0;
+    z-index: 2;
+    margin-left: 2%;
+    margin-top: 2%;
   }
   .navbar > h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     transform: rotate(0);
+    margin-right: 2rem;
   }
   .carousel {
     height: 60rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 1rem;
   }
   .card {
     transform: translateX(-40%);
@@ -637,14 +647,16 @@ select {
     transform: translateX(-130%);
   }
   .autoContainer {
+    text-align: center;
     margin: 10vh auto;
     overflow: auto;
   }
   .autoContainer .cardAuto {
-    width: 85%;
+    width: 80%;
   }
-  #petrolHead {
-    margin-right: 4rem;
+  .autoContainer #petrolHead, .autoContainer #elecHead {
+    font-size: 3rem;
+    margin-right: 7rem;
   }
 }
 

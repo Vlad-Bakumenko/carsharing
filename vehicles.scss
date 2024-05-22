@@ -49,7 +49,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  width: 100vw;
   font-family: Roboto-Reg, sans-serif;
 }
 
@@ -62,7 +61,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,12 +71,13 @@ header {
       width: 100%;
       background-color: $onyx;
       display: flex;
-      margin-left: 2rem;
+      // margin-left: 2rem;
       gap: 3rem;
       justify-content: space-between;
       .navbar-menu {
         display: flex;
         align-items: center;
+        padding-left: 2%;
       }
     }
     h1 {
@@ -111,32 +111,21 @@ header {
     }
   }
   
-  #hamburger-input{
+  #hamburger-input, i.fa-bars{
     display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    color: white;
   }
   
-  #hamburger-menu {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      display: none;
-      border: none;
-      padding: 0px;
-      margin: 0px;
-      font-family: 'Cabin', Sans-serif;
-      background: linear-gradient(
-        to bottom, 
-        $onyx, $onyx 20%, 
-        white 20%, white 40%, 
-        $onyx 40%, $onyx 60%, 
-        white 60%, white 80%, 
-        $onyx 80%, $onyx 100%
-      );
-  }
   
-  #hamburger-menu #sidebar-menu {
+  #sidebar-menu {
       visibility: hidden;
       position: fixed;
       top: 0;
@@ -153,31 +142,31 @@ header {
       border: #8CC63F 3px solid;
   }
   
-  #hamburger-menu h3 {
+  #sidebar-menu h3 {
     color: #8CC63F;
     font-size: 2.2rem;
   }
   
-  #hamburger-menu ul {
+  #sidebar-menu ul {
     padding-left: 0px;
   }
   
-  #hamburger-menu li {
+  #sidebar-menu li {
     list-style-type: none;
     line-height: 3rem;
   }
   
-  #hamburger-menu a {
+  #sidebar-menu a {
     color: #8CC63F;
     font-size: 2rem;
     text-decoration: none;
   }
   
-  #hamburger-menu a:hover {
+  #sidebar-menu a:hover {
     text-decoration: underline;
   }
   
-  #hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  #hamburger-input:checked + #sidebar-menu {
       visibility: visible;
       left: 0;
   }
@@ -192,10 +181,11 @@ header {
   .subnav-content {
     width: 14rem;
     position: absolute;
-    bottom: -6.5rem;
+    bottom: -7.7rem;
     background-color: $onyx;
     cursor: pointer;
     display: none;
+    margin-top: 2rem;
     .subnav-item {
       padding: 1rem;
       color: white;
@@ -536,6 +526,12 @@ main {
         input:not([type=radio]) {
           width: 80%;
         }
+        &:nth-child(6) {
+          align-items: center;
+          & > div > label {
+            font-size: 1.8rem;
+          }
+        }
       }
       button {
         width: 20%;
@@ -608,17 +604,26 @@ main {
   .subnav {
     display: none;
   }
-  #hamburger-menu {
+  i.fa-bars {
     display: inline;
+    margin-left: 2%;
+    margin-top: 2%;
+  }
+  #hamburger-input {
+    display: inline;
+    opacity: 0;
+    z-index: 2;
+    margin-left: 2%;
+    margin-top: 2%;
   }
   .navbar > h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     transform: rotate(0);
+    margin-right: 2rem;
   }
   .carousel {
     height: 60rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 1rem;
   }
   .card {
     transform: translateX(-40%);
@@ -694,13 +699,15 @@ main {
         transform: translateX(-130%);
       }
       .autoContainer {
+        text-align: center;
         margin: 10vh auto;
         overflow: auto;
         .cardAuto {
-            width: 85%;
+            width: 80%;
         }
-      }
-      #petrolHead {
-        margin-right: 4rem;
+        #petrolHead, #elecHead {
+          font-size: 3rem;
+          margin-right: 7rem;
+        }
       }
 }
