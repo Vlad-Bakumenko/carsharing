@@ -454,7 +454,7 @@ footer {
       width: 20%;
       height: 4rem;
       font-size: 2rem;
-      text-align: center;
+      padding: 2%;
       &:hover {
         background-color: #8CC63F;
       }
@@ -708,7 +708,6 @@ select {
       }
       button {
         align-self: flex-end;
-        width: 25%;
       }
     }
     .social-media {
